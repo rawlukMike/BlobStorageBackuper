@@ -20,7 +20,6 @@ namespace BlobBackuper
             // Sztuczka aby mieć asynchroniczny kod wewnątrz zwykłego Main.
             // Tworzysz nowe zadanie/wątek Task i uruchamiasz w nim asynchroniczny kod async() => twój kod
             // Istotne że GetResultPoczeka aż się wykona i zablokuje dalszy kod. W konsoli fajnie, w gui źle.
-
             Task.Run(async () =>
             {
                 await storage.UploadFile(@"C:\Private\Zdjecia\RogueOnek\Hovedoya.mp4", threads: 5);
