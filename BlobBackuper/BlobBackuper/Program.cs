@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BlobBackuper.Helper;
-using Microsoft.Data.OData.Query.SemanticAst;
-using Microsoft.WindowsAzure.Storage.Auth;
-
+using System.IO;
 namespace BlobBackuper
 {
     class Program
@@ -14,7 +8,7 @@ namespace BlobBackuper
         static void Main(string[] args)
         {
             //keys.config zawiera connection string który jest kluczem. Nie dałem go na githubie aby nikt mi nie korzystał na mój rachunek.
-            string key = System.IO.File.ReadAllText("keys.config");
+            string key = File.ReadAllText("keys.conf");
             var storage = new BlobManager(key);
 
             // Sztuczka aby mieć asynchroniczny kod wewnątrz zwykłego Main.
