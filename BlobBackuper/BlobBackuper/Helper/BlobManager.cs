@@ -92,7 +92,7 @@ namespace BlobBackuper.Helper
             for (int i = 0; i < loops; i++) await myblob.DownloadToFileAsync(desDirName + @"\" + fileName, FileMode.Create, acc, bro, context);
         }
 
-        // CHECK
+        // CHECK comment
         public void DownloadFolder(string desDirName, int concurrent = 5, int threads = 1)
         {
             BlobRequestOptions bro = new BlobRequestOptions()
